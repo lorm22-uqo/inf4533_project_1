@@ -1,0 +1,148 @@
+/* layout */
+
+.grid {
+  display: grid;
+  grid-template-rows: 90%, 10%;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+
+/* blocks */
+
+#chat {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  width: 100%;
+  height: 80vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#contacts {
+  grid-column-start: 9;
+  grid-column-end: 12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input_box {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 12;
+  width: 100%;
+  height: 10vh;
+  padding: 1rem 0;
+}
+
+/* elements */
+
+#chat_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-evenly;
+}
+#chat_input {
+  width: 95%;
+  height: 8vh;
+}
+
+.chat-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-row__you {
+  justify-content: flex-end;
+}
+
+.chat-row__them {
+  justify-content: flex-start;
+}
+
+.chat-bubble__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.chat-bubble {
+  color: white;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0;
+}
+
+.name-tag {
+  color: rgb(160, 160, 160);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  margin: 1.25rem;
+}
+
+.contactBtn {
+  color: white;
+  background-color: rgb(108, 23, 206);
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.contactBtn:focus {
+  color: rgb(108, 23, 206);
+  background-color: rgb(77, 77, 77);
+}
+
+.contactBtn_active {
+  color: white;
+  background-color: rgb(77, 77, 77);
+  padding: 0.9rem 1.9rem;
+}
+
+/* modifiers */
+
+.brdr__radius {
+  border-radius: 9px;
+}
+
+.elem__border {
+  border: 1px solid rgb(108, 23, 206);
+}
+
+.no__border {
+  border: none;
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 3px rgb(160, 160, 160);
+}
+
+.name-tag__you {
+  text-align: right;
+}
+
+.name-tag__them {
+  text-align: left;
+}
+
+.you {
+  background-color: rgb(108, 23, 206);
+}
+
+.them {
+  background-color: rgb(160, 160, 160);
+  float: right;
+}
